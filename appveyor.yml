@@ -1,0 +1,14 @@
+version: 1.0.{build}
+image: Ubuntu1804
+environment:
+  matrix:
+    - nodejs_version: '12'
+init:
+  - npm install
+build_script:
+  - npm run build
+test_script:
+  - npm test
+artifacts:
+  - path: /dist
+    name: my-artifacts
