@@ -1,14 +1,18 @@
 version: 1.0.{build}
-image: Ubuntu1804
-environment:
-  matrix:
-    - nodejs_version: '12'
-init:
+
+image: Visual Studio 2019
+
+install:
   - npm install
+
 build_script:
   - npm run build
-test_script:
-  - npm test
-artifacts:
-  - path: /dist
-    name: my-artifacts
+
+deploy:
+  provider: GitHub
+  github_token: $GH_TOKEN
+  repository: Mikhail5509/credit-card-validator
+  branch: gh-pages
+  folder: dist
+  on:
+    branch: main
