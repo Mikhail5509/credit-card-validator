@@ -10,7 +10,7 @@ build_script:
 
 deploy:
   provider: GitHub
-  github_token: $GH_TOKEN
+  github_token: $GITHUB_TOKEN
   repository: Mikhail5509/credit-card-validator
   branch: gh-pages
   folder: dist
