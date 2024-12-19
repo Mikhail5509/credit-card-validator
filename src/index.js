@@ -1,6 +1,5 @@
-// Импортируем функции из cardUtils.js
-import { getCardType, isValidCardNumber } from './cardUtils';
 import './style.css';
+import { getCardType, isValidCardNumber } from './cardUtils';
 
 import visaLogo from './images/visa.png';
 import mastercardLogo from './images/mastercard.png';
