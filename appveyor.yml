@@ -10,9 +10,9 @@ build_script:
 
 deploy:
   provider: GitHub
-  github_token: $GITHUB_TOKEN
-  repository: Mikhail5509/credit-card-validator
-  branch: gh-pages
-  folder: dist
+  auth_token:
+    secure: <GITHUB_TOKEN>
+  tag: $(appveyor_build_version)
   on:
     branch: main
+
